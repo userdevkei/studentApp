@@ -19,14 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::any('/intakeIndex', 'Applicationmodule@intakeIndex')->name('intakeIndex');
+Route::any('/coursesIndex', 'Applicationmodule@coursesIndex')->name('coursesIndex');
+Route::any('/studylevelIndex', 'Applicationmodule@studylevelIndex')->name('studylevelIndex');
+Route::any('/attedanceIndex', 'Applicationmodule@attedanceIndex')->name('attedanceIndex');
+Route::any('/intakeCreate', 'Applicationmodule@intakeCreate')->name('intakeCreate');

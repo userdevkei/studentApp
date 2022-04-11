@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Intake;
 use Illuminate\Http\Request;
 
 class Applicationmodule extends Controller
 {
     public function intakeIndex(){
+        $intake = Intake::all();
+
+        return $intake;
+
         return view('intake.index');
     }
 
